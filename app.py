@@ -22,8 +22,8 @@ app.config['UPLOAD_PATH']        = './static/images/uploads/'
 model = None
 
 NUM_CLASSES = 9
-minang_food_classes = ["telur_dadar", "telur_balado", "gulai_tunjang", "gulai_tambusu", "gulai_ikan", 
-                   "dendeng_batokok", "daging_rendang", "ayam_pop", "ayam_goreng"]
+minang_food_classes = ["telur dadar", "telur balado", "gulai tunjang", "gulai tambusu", "gulai ikan", 
+                   "dendeng batokok", "daging rendang", "ayam pop", "ayam goreng"]
 
 # =[Routing]=====================================
 
@@ -60,7 +60,8 @@ def apiDeteksi():
 			test_image         = Image.open('.' + gambar_prediksi)
 			
 			# Mengubah Ukuran Gambar
-			test_image_resized = test_image.resize((224, 224))
+			test_image_resized = test_image.resize((200, 200))
+
 			
 			# Konversi Gambar ke Array
 			image_array        = np.array(test_image_resized)
@@ -92,7 +93,7 @@ if __name__ == '__main__':
 	
 	# Load model yang telah ditraining
 	model = make_model()
-	model.load_weights("model_makanan_cv4.h5")
+	model.load_weights("train/model_makanan_cv4.h5")
 
 	# Run Flask di localhost 
 	app.run(host="localhost", port=5000, debug=True)
