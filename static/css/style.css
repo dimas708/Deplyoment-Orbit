@@ -661,6 +661,19 @@ section {
   top: 12px;
 }
 
+.read-more {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #fff;
+  background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%);
+  position: relative;
+}
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
