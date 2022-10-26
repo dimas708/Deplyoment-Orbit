@@ -61,10 +61,11 @@ def apiDeteksi():
 			
 			# Mengubah Ukuran Gambar
 			test_image_resized = test_image.resize((200, 200))
+
 			
 			# Konversi Gambar ke Array
 			image_array        = np.array(test_image_resized)
-			test_image_x       = (image_array / 255) - 0.5
+			test_image_x       = (image_array / 255)
 			test_image_x       = np.array([image_array])
 			
             # Prediksi Gambar
