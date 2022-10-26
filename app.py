@@ -17,7 +17,7 @@ app = Flask(__name__, static_url_path='/static')
 
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
 app.config['UPLOAD_EXTENSIONS']  = ['.jpg','.JPG']
-app.config['UPLOAD_PATH']        = './static/images/uploads/'
+app.config['UPLOAD_PATH']        = './static/img/uploads/'
 
 model = None
 
@@ -48,7 +48,7 @@ def apiDeteksi():
 	
 		# Set/mendapatkan extension dan path dari file yg diupload
 		file_ext        = os.path.splitext(filename)[1]
-		gambar_prediksi = '/static/images/uploads/' + filename
+		gambar_prediksi = '/static/img/uploads/' + filename
 		
 		# Periksa apakah extension file yg diupload sesuai (jpg)
 		if file_ext in app.config['UPLOAD_EXTENSIONS']:
@@ -60,7 +60,7 @@ def apiDeteksi():
 			test_image         = Image.open('.' + gambar_prediksi)
 			
 			# Mengubah Ukuran Gambar
-			test_image_resized = test_image.resize((200, 200))
+			test_image_resized = test_image.resize((224, 224))
 
 			
 			# Konversi Gambar ke Array
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 	
 	# Load model yang telah ditraining
 	model = make_model()
-	model.load_weights("train/model_makanan_cv4.h5")
+	model.load_weights("train/model_makanan_cv2.h5")
 
 	# Run Flask di localhost 
 	app.run(host="localhost", port=5000, debug=True)

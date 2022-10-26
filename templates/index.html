@@ -1,100 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<!-- Judul Halaman -->
-	<title>Orbit Future Academy</title>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- Icon -->
-	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-	
-	<!-- CSS -->
-	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
-	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
-	
-	<!-- JavaScript -->
-	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
-	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Predict 1 IMAGE DETECTION</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href={{ url_for('static', filename='/img/favicon.png') }} rel="icon">
+  <link href={{ url_for('static', filename='/img/apple-touch-icon.png') }} rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href={{ url_for('static', filename='/vendor/aos/aos.css') }} rel="stylesheet">
+  <link href={{ url_for('static', filename='/vendor/bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
+  <link href={{ url_for('static', filename='/vendor/bootstrap-icons/bootstrap-icons.css') }} rel="stylesheet">
+  <link href={{ url_for('static', filename='/vendor/boxicons/css/boxicons.min.css') }}rel="stylesheet">
+  <link href={{ url_for('static', filename='/vendor/glightbox/css/glightbox.min.css') }} rel="stylesheet">
+  <link href={{ url_for('static', filename='/vendor/swiper/swiper-bundle.min.css') }} rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href={{ url_for('static', filename='/css/style.css') }} rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+  <script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
 </head>
 
-<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body>
 
-	<!-- Navigation Bar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			
-			<!-- Logo -->
-			<div class="navbar-header">
-				<img src={{ url_for('static', filename='/images/orbit_logo.jpg') }} alt="Orbit Logo" 
-				width="50" height="50" align="left">
-				<a class="navbar-brand" href="#halamanku">&#160; Orbit Future Academy</a>
-			</div>
-			
-			<!-- Daftar Halaman -->
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#informasi">INFORMASI</a></li>
-					<li><a href="#aplikasi">APLIKASI</a></li>
-					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">Predict 1</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Group Member</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Aplikasi</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-	<!-- Bagian Halaman (Informasi) -->
-	<div id="informasi" class="container-fluid">
-		<br>
-		<br>
-		<div class="row">
-			<div class="col-sm-6">
-				<h2>CIC</h2>
-				<h4>Cifar-10 Image Classification</h4><br>
-				<p style="text-align: justify;text-justify: inter-word;">
-					Aplikasi ini dibuat khusus untuk mendeteksi sebuah objek dari gambar yang diberikan.
-					Adapun dataset yang digunakan untuk model klasifikasi gambar ini adalah CIFAR-10. 
-					Pada dataset CIFAR-1, terdapat 10 objek yang dapat diklasifikasi yaitu pesawat, mobil, burung, kucing,
-					rusa, anjing, katak, kuda, kapal, dan truk.
-					Untuk dapat menggunakan aplikasi ini, pengguna hanya mengunggah sebuah gambar dengan format 'JPG'. 
-					Hasil deteksi objek akan ditampilkan setelah pengguna mengunggah gambar tersebut.
-				</p>
-				<br>
+    </div>
+  </header><!-- End Header -->
 
-				<!-- Tombol Mulai -->
-				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
-					<ul class="nav nav-pills">
-						<li class="nav-item">
-							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#28ace5">Mulai</a>
-						</li>
-					</ul>
-				</nav>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
 
-			</div>
-			<div class="col-sm-6">
-				<br>
-				<br>
-				<!-- Gambar Deskripsi Aplikasi -->
-				<div align="center">
-					<img src={{ url_for('static', filename='/images/app-display.JPG') }} height="300" ></img>
-				</div>
-			</div>
-		</div>
-		<br>
-	</div>
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Picture Detection Of Padang Food</h1>
+          <h2>Pendeteksian Gambar Untuk Jenis Makanan dari Daerah Padang</h2>
+          <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div>
+        </div>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+          <img src={{ url_for('static', filename='/img/hero-img.png') }} class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
 
+  </section><!-- End Hero -->
 
-	<!-- Bagian Halaman (Aplikasi) -->
-	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-		<br>
-		<br>
-		<div class="row">
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+            <img src={{ url_for('static', filename='/img/about.png') }} class="img-fluid animated" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+            <h3>Picture Detection Of Padang Food</h3>
+            <p class="fst-italic">
+              Aplikasi Ini Berguna Dalam Pendeteksian Gambar Untuk Mengetahui Jenis Makanan yang Berasal dari Daerah Padang. Langkah-Langkah Penggunaan Aplikasi :
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Pilih 'Aplikasi' pada Bar</li>
+              <li><i class="bi bi-check-circle"></i> Klik 'Choose File' Untuk Menginput Gambar yang Akan Dideteksi</li>
+              <li><i class="bi bi-check-circle"></i> Klik Prediksi Untuk Melihat Hasilnya</li>
+            </ul>
+            <a href="#" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Member</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Domain</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Month of Study</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+            <p>University</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Member</h2>
+          <p>Kelompok Predict 1 adalah Kelas yang Dibimbing Oleh Coach Billy Dengan Beranggotakan : </p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 " data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <img src={{ url_for('static', filename='/img/dimas.jpg') }} width="100px" alt="">
+              <h4><a href="">Dimas Budi Utomo</a></h4>
+              <p>Universitas Pamulang</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 " data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <img src={{ url_for('static', filename='/img/fikry.jpeg') }} width="100px" alt="">
+              <h4><a href="">Muhammad Fikry Akbar</a></h4>
+              <p>Universitas Pendidikan Indonesia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 " data-aos-delay="300">
+            <div class="icon-box iconbox-yellow">
+              <img src={{ url_for('static', filename='/img/nurjanah.jpeg') }} width="100px" alt="">
+              <h4><a href="">Nurjanah</a></h4>
+              <p>Universitas Pendidikan Indonesia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 " data-aos-delay="100">
+            <div class="icon-box iconbox-pink">
+              <img src={{ url_for('static', filename='/img/risma.jpeg') }} width="100px" alt="">
+              <h4><a href="">Risma Nur Antika</a></h4>
+              <p>Universitas Pendidikan Indonesia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 " data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+              <img src={{ url_for('static', filename='/img/zaki.jpeg') }} width="100px" alt="">
+              <h4><a href="">Zaki Maulana Rabbani</a></h4>
+              <p>Universitas Padjadjaran (Role : Pemodelan AI)</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </div>
+  <div class="col-sm-6">
+    <br>
+    <br>
+    <!-- Gambar Deskripsi Aplikasi -->
+    <div align="center">
+      <img src={{ url_for('static', filename='/img/hasil.png') }} class="img-fluid animated" alt="")} width="500px" ></img>
+    </div>
+  </div>
+</div>
+<br>
+</div>
+
+    <!-- ======= Aplikasi Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
 			<div class="col-sm-6">
 				</br>
 				<h3 style="margin-left: 50px;">Upload Gambar </h3>
 					<form style="margin-left: 50px;">
 						<!-- Input atau Upload Gambar dari Pengguna -->
-						<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="300" ></img>
+						<img src={{ url_for('static', filename='/img/hasil.png') }} class="img-fluid animated" alt="")} width="50%" ></img>
 						<p>silahkan upload sebuah gambar</p>
 						<p>
 							<input type="file" id="input_gambar" name="file">
@@ -118,45 +231,80 @@
 		</br>
 	</div>
 
-	<!-- Bagian Halaman (Anggota Kelompok) -->
-	<div id="anggotaKelompok" class="container-fluid text-center">
-		<br>
-		<h2>ANGGOTA KELOMPOK</h2>
-		<h4>Tim Deployment dan Tim CV</h4>
-		<br>
-		<div class="row slideanim">
-			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-user logo-small"></span>
-				<h4>BUDI</h4>
-				<p>Universitas Sumatera</p>
-			</div>
-			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-user logo-small"></span>
-				<h4>AYU</h4>
-				<p>Universitas Jawa dan Bali</p>
-			</div>
-			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-user logo-small"></span>
-				<h4>TONO</h4>
-				<p>Universitas Kalimantan</p>
-			</div>
-		</div>
-	    <br>
-	    <div class="row slideanim">
-			<div class="col-sm-6">
-				<span class="glyphicon glyphicon-user logo-small"></span>
-				<h4>PUTRA</h4>
-				<p>Universitas Sulawesi</p>
-			</div>
-			<div class="col-sm-6">
-				<span class="glyphicon glyphicon-user logo-small"></span>
-				<h4>PUTRI</h4>
-				<p>Universitas Kepulauan Nusa, Maluku dan Papua</p>
-			</div>
-	    </div>
-	</div>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
 
-	<!-- Footer -->
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Veteran RI Building 15th Floor Plaza Semanggi, Jl. Jend. Sudirman No.Kav. 50, RT.1/RW.4, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>(021) 25536346</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+            <img src={{ url_for('static', filename='/img/logo.jpg') }} class="img-fluid animated" alt="")} width="800" ></img>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
 	<footer class="container-fluid text-center">
 		<a href="#halamanku" title="To Top">
 			<span class="glyphicon glyphicon-chevron-up"></span>
@@ -167,5 +315,22 @@
 	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
 	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
 
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src={{ url_for('static', filename='/vendor/purecounter/purecounter_vanilla.js') }}></script>
+  <script src={{ url_for('static', filename='/vendor/aos/aos.js') }}></script>
+  <script src={{ url_for('static', filename='/vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+  <script src={{ url_for('static', filename='/vendor/glightbox/js/glightbox.min.js') }}></script>
+  <script src={{ url_for('static', filename='/vendor/isotope-layout/isotope.pkgd.min.js') }}></script>
+  <script src={{ url_for('static', filename='/vendor/swiper/swiper-bundle.min.js') }}></script>
+  <script src={{ url_for('static', filename='/vendor/php-email-form/validate.js') }}></script>
+
+  <!-- Template Main JS File -->
+  <script src={{ url_for('static', filename='/js/main.js') }}></script>
+
 </body>
+
 </html>

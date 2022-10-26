@@ -74,7 +74,7 @@ $(document).ready(function(){
 	else {
 		str += "<h3>Hasil Prediksi </h3>";
 		str += "<br>";
-		str += "<img src='" + image_prediksi + "' width=\"200\"></img>"
+		str += "<img src='" + image_prediksi + "' width=\"800\"></img>"
 		str += "<h3>" + data_prediksi + "</h3>";
 	}
 	$("#hasil_prediksi").html(str);
