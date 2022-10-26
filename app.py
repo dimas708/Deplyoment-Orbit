@@ -60,15 +60,15 @@ def apiDeteksi():
 			test_image         = Image.open('.' + gambar_prediksi)
 			
 			# Mengubah Ukuran Gambar
-			test_image_resized = test_image.resize((32, 32))
+			test_image_resized = test_image.resize((224, 224))
 			
 			# Konversi Gambar ke Array
 			image_array        = np.array(test_image_resized)
-			test_image_x       = (image_array / 255) - 0.5
+			test_image_x       = (image_array / 255)
 			test_image_x       = np.array([image_array])
 			
             # Prediksi Gambar
-			y_pred_test_single         = model.predict_proba(test_image_x)
+			y_pred_test_single         = model.predict(test_image_x)
 			y_pred_test_classes_single = np.argmax(y_pred_test_single, axis=1)
 			
 			hasil_prediksi = minang_food_classes[y_pred_test_classes_single[0]]
@@ -92,7 +92,7 @@ if __name__ == '__main__':
 	
 	# Load model yang telah ditraining
 	model = make_model()
-	model.load_weights("model_makanan_cv2.h5")
+	model.load_weights("model_makanan_cv4.h5")
 
 	# Run Flask di localhost 
 	app.run(host="localhost", port=5000, debug=True)
